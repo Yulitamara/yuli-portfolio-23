@@ -1,0 +1,40 @@
+.products {
+  grid-column: container-start / container-end;
+
+  @extend %sec-padding;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  place-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    padding: 2rem;
+    border-radius: 30px;
+    &--header {
+      display: flex;
+      line-height: normal;
+      align-items: flex-end;
+      &__img {
+        width: 100px;
+      }
+      &__title {
+        @extend %sec-heading;
+      }
+    }
+    &--para {
+      @extend %sec-para;
+      text-align: center;
+    }
+    &--link {
+      margin-top: auto;
+      color: var(--color-on-secondary) !important;
+    }
+  }
+}

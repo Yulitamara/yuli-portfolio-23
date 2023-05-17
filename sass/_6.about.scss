@@ -1,0 +1,20 @@
+.about {
+  grid-column: container-start / container-end;
+  @extend %sec-padding;
+  color: var(--color-on-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @extend %sec-heading;
+    font-weight: font-weight(font-weight-medium) !important;
+    padding: 1rem;
+  }
+
+  &__para {
+    text-align: center;
+    @extend %sec-para;
+    margin-bottom: 4rem;
+  }
+}
