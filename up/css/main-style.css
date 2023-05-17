@@ -568,14 +568,21 @@ input:focus {
   margin-bottom: 4rem;
 }
 
-.products {
+.skills {
   grid-column: container-start/container-end;
+}
+.skills__title {
+  font-weight: 500 !important;
+  padding: 1rem;
+  text-align: center;
+}
+.skills .content-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
   place-content: center;
 }
-.products__content {
+.skills__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -585,63 +592,99 @@ input:focus {
   padding: 2rem;
   border-radius: 30px;
 }
-.products__content--header {
+.skills__content--header {
   display: flex;
   line-height: normal;
   align-items: flex-end;
 }
-.products__content--header__img {
+.skills__content--header__img {
   width: 100px;
 }
-.products__content--para {
+.skills__content--para {
   text-align: center;
 }
-.products__content--link {
+.skills__content--link {
+  margin-top: auto;
+  color: var(--color-on-secondary) !important;
+}
+
+.projects {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects__title {
+  font-weight: 500 !important;
+  padding: 1rem;
+  text-align: center;
+}
+.projects .content-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.projects__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  border-radius: 30px;
+  width: 25rem;
+  height: 35rem;
+}
+.projects__content .img-container img {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 100%;
+}
+.projects__content--para {
+  text-align: center;
+}
+.projects__content--link {
   margin-top: auto;
   color: var(--color-on-secondary) !important;
 }
 
 .contact {
   grid-column: container-start/container-end;
-  border-top: 1px solid #cecece;
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(253, 251, 214);
 }
 .contact__content {
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   color: var(--color-on-tertiary);
+  display: flex;
 }
 .contact__content--info {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
 }
-.contact__content--info__details {
-  margin-top: 2rem;
-}
-.contact__content--info__details--detail {
-  margin: 0.7rem 0;
+.contact__content--info__social {
   display: flex;
   align-items: center;
-  font-size: calc(1.2rem + 0.4vw);
-  gap: 0.7rem;
-}
-.contact__content--info__details--detail .contact-icon {
-  width: 28px;
+  justify-content: center;
+  gap: 3rem;
 }
 .contact__content--info__img {
   align-self: center;
-  margin-top: 4rem;
 }
 .contact__content--info__img img {
   width: 200px;
 }
 .contact__content--form {
-  background-color: var(--color-tertiary);
+  border: 3px solid var(--color-tertiary);
   color: var(--color-on-tertiary);
   border-radius: 30px;
 }
@@ -667,33 +710,6 @@ input:focus {
   }
 }
 
-.privacy {
-  grid-column: container-start/container-end;
-  padding: 10rem 20rem;
-  line-height: 2.2;
-  color: var(--color-on-background);
-}
-.privacy__title {
-  font-size: calc(1.5rem + 1vw);
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-  text-align: center;
-}
-.privacy__small-title {
-  font-size: calc(1.2rem + 0.4vw);
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-}
-.privacy__para {
-  font-size: calc(1rem + 0.2vw);
-  padding: 1rem 0;
-}
-@media screen and (max-width: 800px) {
-  .privacy {
-    padding: 5rem 2.5rem;
-  }
-}
-
 .footer {
   grid-column: container-start/container-end;
   display: flex;
@@ -708,22 +724,22 @@ input:focus {
   font-size: calc(1rem + 0.2vw);
 }
 
-.hero, .hero__content, .about, .products, .contact, .contact__content--info, .contact__content--form {
+.hero, .hero__content, .about, .skills, .projects, .contact, .contact__content--info, .contact__content--form {
   padding: 4vh 4vw;
 }
 @media screen and (min-width: 1700px) {
-  .hero, .hero__content, .about, .products, .contact, .contact__content--info, .contact__content--form {
+  .hero, .hero__content, .about, .skills, .projects, .contact, .contact__content--info, .contact__content--form {
     padding: 4vh 2vw;
   }
 }
 
-.about__title, .products__content--header__title, .contact__content--info__title, .contact__content--form__title {
+.about__title, .skills__title, .skills__content--header__title, .projects__title, .projects__content .img-container__title, .contact__content--info__title, .contact__content--form__title {
   font-size: calc(1.5rem + 0.9vw);
   font-weight: 300;
   letter-spacing: 0.1rem;
 }
 
-.about__para, .products__content--para, .contact__content--info__para {
+.about__para, .skills__content--para, .projects__content--para {
   font-size: calc(1.2rem + 0.4vw);
 }
 

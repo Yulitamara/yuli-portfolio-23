@@ -1,13 +1,20 @@
-.products {
+.skills {
   grid-column: container-start / container-end;
 
   @extend %sec-padding;
+  &__title {
+    @extend %sec-heading;
+    font-weight: font-weight(font-weight-medium) !important;
+    padding: 1rem;
+    text-align: center;
+  }
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem;
-  place-content: center;
-
+  .content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    place-content: center;
+  }
   &__content {
     display: flex;
     flex-direction: column;

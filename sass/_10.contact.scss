@@ -1,6 +1,6 @@
 .contact {
   grid-column: container-start / container-end;
-  border-top: 1px solid #cecece;
+  // border-top: 1px solid #cecece;
 
   position: relative;
   min-height: 100vh;
@@ -8,41 +8,34 @@
   align-items: center;
   justify-content: center;
   @extend %sec-padding;
+  background-color: rgb(253, 251, 214);
 
   &__content {
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
     color: var(--color-on-tertiary);
+    display: flex;
 
     &--info {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
       @extend %sec-padding;
       &__title {
         @extend %sec-heading;
       }
-      &__para {
-        @extend %sec-para;
+      &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
       }
-      &__details {
-        margin-top: 2rem;
 
-        &--detail {
-          margin: 0.7rem 0;
-          display: flex;
-          align-items: center;
-          font-size: font-size(font-size-small);
-          gap: 0.7rem;
-
-          .contact-icon {
-            width: 28px;
-          }
-        }
-      }
       &__img {
         align-self: center;
-        margin-top: 4rem;
+        // margin-top: 4rem;
         img {
           width: 200px;
         }
@@ -50,7 +43,9 @@
     }
 
     &--form {
-      background-color: var(--color-tertiary);
+      // background-color: var(--color-tertiary);
+      border: 3px solid var(--color-tertiary);
+
       color: var(--color-on-tertiary);
       border-radius: 30px;
       @extend %sec-padding;
