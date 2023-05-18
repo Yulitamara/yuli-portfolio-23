@@ -1,4 +1,4 @@
-let flyingMan = document.querySelector(".flying-man");
+let heroGif = document.querySelector(".hero-gif");
 let clouds = document.querySelector(".clouds-img");
 
 window.addEventListener("scroll", function () {
