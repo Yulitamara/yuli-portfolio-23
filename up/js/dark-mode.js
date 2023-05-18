@@ -1,12 +1,14 @@
 //darkmode toggle
 const sun = '<span class="material-symbols-outlined">light_mode</span>';
 const moon = '<span class="material-symbols-outlined">dark_mode</span>';
+const bgAnimation = document.querySelector(".bg-animation");
 
 const toggleSwitch = document.querySelector("#darkmodeToggle");
 function switchTheme(e) {
   if (document.documentElement.getAttribute("data-theme") == "light") {
     document.documentElement.setAttribute("data-theme", "dark");
-    clouds.src = "/up/imgs/moon.png";
+    clouds.src = null;
+    bgAnimation.classList.remove("active");
     heroGif.src = "/up/imgs/hero-night-gif.gif";
     this.innerHTML = sun;
   } else {

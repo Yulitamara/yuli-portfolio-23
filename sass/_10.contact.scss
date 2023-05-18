@@ -1,5 +1,7 @@
 .contact {
   grid-column: container-start / container-end;
+  background-color: var(--color-primary);
+
   // border-top: 1px solid #cecece;
 
   position: relative;
@@ -8,8 +10,6 @@
   align-items: center;
   justify-content: center;
   @extend %sec-padding;
-  // background-color: rgb(253, 251, 214);
-  background-color: #d9e1f5;
 
   &__content {
     border-radius: 10px;
