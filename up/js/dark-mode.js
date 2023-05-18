@@ -7,7 +7,7 @@ const toggleSwitch = document.querySelector("#darkmodeToggle");
 function switchTheme(e) {
   if (document.documentElement.getAttribute("data-theme") == "light") {
     document.documentElement.setAttribute("data-theme", "dark");
-    clouds.src = "";
+    clouds.src = "/up/imgs/moon.png";
     bgAnimation.classList.remove("active");
     heroGif.src = "/up/imgs/hero-night-gif.gif";
     this.innerHTML = sun;
