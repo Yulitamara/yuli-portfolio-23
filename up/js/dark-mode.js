@@ -13,6 +13,7 @@ function switchTheme(e) {
     this.innerHTML = sun;
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    bgAnimation.classList.add("active");
     this.innerHTML = moon;
     clouds.src = "/up/imgs/clouds2.png";
     heroGif.src = "/up/imgs/hero-gif.gif";
