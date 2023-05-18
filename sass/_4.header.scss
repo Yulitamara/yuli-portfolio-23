@@ -1,6 +1,6 @@
 .header {
   grid-column: container-start / container-end;
-  z-index: 10;
+  z-index: 200;
 
   // Dynamic Class => is toggled using JavaScript
   // Middle Line
@@ -47,7 +47,7 @@
 
     &--logo {
       &__name {
-        letter-spacing: -0.07em;
+        letter-spacing: -0.02em;
         color: var(--color-on-background);
 
         span {
@@ -65,7 +65,7 @@
         a:link,
         a:visited {
           // margin: 0 2vw;
-          padding: 0 4rem;
+          padding: 0 2rem;
           color: var(--color-on-background);
         }
       }

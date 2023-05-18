@@ -66,12 +66,13 @@ i {
 .btn-secondary {
   font-size: font-size(font-size-small);
   padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
-  border: 2px solid;
+  border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   color: var(--color-on-tertiary);
   background-color: var(--color-tertiary);
+  border: 1px solid var(--color-on-tertiary);
 }
 .btn-secondary:hover {
   color: var(--color-tertiary);
@@ -107,6 +108,7 @@ textarea {
   justify-content: space-evenly;
   margin-bottom: 1rem;
   border-radius: 5px;
+  border: 1px solid var(--color-on-tertiary);
 }
 
 .textarea {
@@ -123,10 +125,10 @@ textarea {
     resize: none;
     padding: 10px;
     font-size: font-size(font-size-small);
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-on-background);
     border-radius: 5px;
-    border: none;
+    border: 1px solid var(--color-on-tertiary);
   }
 }
 
@@ -136,7 +138,7 @@ textarea {
   align-items: center;
 }
 .label-container {
-  background-color: var(--color-surface);
+  // background-color: var(--color-surface);
   display: flex;
   padding: 0 1rem;
   align-items: center;
@@ -154,15 +156,12 @@ textarea {
 }
 
 .input-container {
-  background-color: var(--color-background);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
   min-width: 0;
-  // border-radius: 0 5px 5px 0;
-
-  padding-left: 1rem;
+  padding: 1rem;
 }
 
 input:focus {

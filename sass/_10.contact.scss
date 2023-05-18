@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: center;
   @extend %sec-padding;
-  background-color: rgb(253, 251, 214);
+  // background-color: rgb(253, 251, 214);
+  background-color: #d9e1f5;
 
   &__content {
     border-radius: 10px;
@@ -25,12 +26,20 @@
       @extend %sec-padding;
       &__title {
         @extend %sec-heading;
-      }
-      &__social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
+        color: var(--color-on-tertiary);
+
+        i,
+        a {
+          color: var(--color-on-tertiary);
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          background-color: var(--color-tertiary);
+          padding: 10px 20px;
+          border-radius: 30px;
+        }
       }
 
       &__img {
@@ -43,12 +52,18 @@
     }
 
     &--form {
-      // background-color: var(--color-tertiary);
-      border: 3px solid var(--color-tertiary);
+      background-color: var(--color-tertiary);
+
+      // border: 3px solid var(--color-tertiary);
 
       color: var(--color-on-tertiary);
       border-radius: 30px;
-      @extend %sec-padding;
+      // @extend %sec-padding;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      justify-content: space-around;
 
       &__title {
         @extend %sec-heading;

@@ -25,10 +25,10 @@
       z-index: 0;
       opacity: 0.6;
     }
-    .flying-man {
+    .hero-gif {
       position: absolute;
       top: -50;
-      z-index: 8;
+      z-index: 100;
       margin: 0 40%;
       width: 300px;
     }
@@ -46,8 +46,19 @@
     &--para {
       font-size: font-size(font-size-regular);
       font-weight: font-weight(font-weight-light);
-      margin-bottom: calc(1rem + 2vw);
+      margin-bottom: calc(1rem + 1vw);
       z-index: 9;
+    }
+
+    &--social {
+      display: flex;
+      gap: 1rem;
+      padding: 10px 0 30px 0;
+      z-index: 3;
+
+      i {
+        color: var(--color-on-primary);
+      }
     }
 
     &--links {
@@ -69,11 +80,12 @@
       align-items: center;
       margin-top: 10rem;
 
-      .flying-man {
+      .hero-gif {
         bottom: 5%;
         margin: 0 50%;
         width: 250px;
       }
+
       &--links {
         justify-content: flex-start;
       }
@@ -84,7 +96,7 @@
   @include media-medium {
     padding: 4rem;
     &__content {
-      .flying-man {
+      .hero-gif {
         bottom: 10%;
         width: 200px;
       }
@@ -132,7 +144,7 @@
       align-items: center;
       margin-top: 10rem;
 
-      .flying-man {
+      .hero-gif {
         bottom: 5%;
         margin: 0 50%;
         width: 300px;
