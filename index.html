@@ -13,6 +13,13 @@
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="./up/css/main-style.css">
     <title>My Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("nWkvqRFbu1rCg5bAq");
+        })();
+    </script>
 </head>
 
 <body class="container" dir="ltr">
@@ -225,9 +232,7 @@
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Contact Section --*-*-*-*-*-*-*-*-*-*-*-->
     <section class="contact" id="contact">
-
         <div class="contact__content">
-
             <div class="contact__content--info">
                 <h3 class="contact__content--info__title">
                     <a href="https://wa.me/972542634686" target="_blank">
@@ -237,29 +242,28 @@
                         </span>
                     </a>
                 </h3>
-
                 <div class="contact__content--info__img">
                     <img src="/up/imgs/contact.png" alt="">
                 </div>
             </div>
-            <form action="index.html" autocomplete="on" class="contact__content--form">
+            <form onclick="sendMail()" action="index.html" autocomplete="on" class="contact__content--form">
                 <h3 class="contact__content--form__title">or write me here:</h3>
                 <div class="contact__content--form__fields">
                     <div class="field-container">
                         <div class="input-container">
-                            <input type="text" class="input" placeholder="Your name" />
+                            <input type="text" class="input" placeholder="Your name" id="fullName" />
                         </div>
                     </div>
                     <div class="field-container">
 
                         <div class="input-container">
-                            <input type="text" class="input" placeholder="Your email" />
+                            <input type="text" class="input" placeholder="Your email" id="email_id" />
                         </div>
                     </div>
 
                     <div class="textarea">
                         <label class="textarea__title">Message:</label>
-                        <textarea name="message" class="input"></textarea>
+                        <textarea name="message" class="input" id="message"></textarea>
                     </div>
                 </div>
                 <input type="submit" value="Send" class="contact__content--form__link btn-secondary"
@@ -284,6 +288,9 @@
 
     <!-- Dark Mode -->
     <script src="./up/js/dark-mode.js"></script>
+
+    <!-- Contact -->
+    <script src="./up/js/contact.js"></script>
 
     <!-- Parallax Scroll -->
     <script src="./up/js/parallax-scroll.js"></script>
