@@ -1,5 +1,5 @@
 .projects {
-  grid-column: center-start / center-end;
+  grid-column: container-start / container-end;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +10,7 @@
     font-weight: font-weight(font-weight-medium) !important;
     padding: 1rem;
     text-align: center;
+    color: var(--color-on-primary);
   }
 
   .content-container {
@@ -27,8 +28,9 @@
     background-color: var(--color-secondary);
     color: var(--color-on-secondary);
     border-radius: 30px;
-    width: 25rem;
-    height: 35rem;
+    width: 30rem;
+    height: 45rem;
+    z-index: 1;
 
     .img-container {
       img {
@@ -36,17 +38,15 @@
         border-top-left-radius: 30px;
         width: 100%;
       }
-      &__title {
-        @extend %sec-heading;
-      }
+    }
+    &--title {
+      font-weight: font-weight(font-weight-regular);
+      font-size: 2rem;
     }
     &--para {
       @extend %sec-para;
       text-align: center;
     }
-    &--link {
-      margin-top: auto;
-      color: var(--color-on-secondary) !important;
-    }
   }
 }
+

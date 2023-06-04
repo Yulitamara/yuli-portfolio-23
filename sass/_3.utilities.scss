@@ -23,11 +23,7 @@ body {
       [col-start] minmax(min-content, 16.66667rem) [col-end]
     )
     [center-end] 1fr [container-end];
-  grid-template-rows: min-content 95vh repeat(9, min-content);
-
-  @include media-tablet {
-    grid-template-rows: min-content 100vh repeat(9, min-content);
-  }
+  grid-template-rows: repeat(9, min-content);
 }
 
 li {
@@ -78,6 +74,65 @@ i {
   color: var(--color-tertiary);
   background-color: var(--color-on-tertiary);
 }
+
+.btn-tertiary {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-tertiary:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.btn-tertiary:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn-tertiary:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btn-tertiary:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn-tertiary {
+    padding: 0 40px;
+  }
+}
+
 /////////////////// FORNS //////////////////////
 input[type="text"],
 input[type="password"],
@@ -184,14 +239,6 @@ input:focus {
 .input-type .input-icon {
   padding: 0.2rem 0.5rem;
 }
-
-// .full-wh {
-// position: absolute;
-// top: 0px;
-// left: 0px;
-// bottom: 0px;
-// width: 100%;
-// }
 
 .active {
   display: none;

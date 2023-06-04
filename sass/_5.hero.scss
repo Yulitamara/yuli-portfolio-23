@@ -2,156 +2,85 @@
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   grid-column: container-start / container-end;
-  @extend %sec-padding;
-
-  display: flex;
-  align-items: center;
   position: relative;
   overflow: hidden;
-  height: 100vh;
   &__content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     line-height: 1.3;
-    @extend %sec-padding;
-
-    .clouds-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.6;
-    }
-    .hero-gif {
-      position: absolute;
-      top: -50;
-      z-index: 100;
-      margin: 0 40%;
-      width: 300px;
-    }
-    &--title {
-      font-size: font-size(font-size-large);
-      font-weight: font-weight(font-weight-light);
-      letter-spacing: -0.07em;
-      z-index: 9;
-      span {
-        letter-spacing: normal;
-        padding-left: 3px;
-      }
-    }
-
-    &--para {
-      font-size: font-size(font-size-regular);
-      font-weight: font-weight(font-weight-light);
-      margin-bottom: calc(1rem + 1vw);
-      z-index: 9;
-    }
-
-    &--social {
+    align-items: center;
+    gap: 5rem;
+    padding: 15rem 10rem 10rem 10rem;
+    .left {
+      flex: 2;
       display: flex;
-      gap: 1rem;
-      padding: 10px 0 30px 0;
-      z-index: 3;
-
-      i {
-        color: var(--color-on-primary);
+      flex-direction: column;
+      .hero__content--title {
+        font-size: font-size(font-size-large);
+        font-weight: font-weight(font-weight-light);
+        letter-spacing: -0.07em;
+        z-index: 9;
+        span {
+          letter-spacing: normal;
+        }
       }
-    }
-
-    &--links {
-      display: flex;
-      gap: 1rem;
-      z-index: 9;
-      a {
-        color: var(--color-on-primary);
+      .hero__content--para {
+        font-size: font-size(font-size-regular);
+        font-weight: font-weight(font-weight-light);
+        margin-bottom: calc(1rem + 1vw);
+        margin-top: 1rem;
+        z-index: 9;
       }
-    }
-  }
-
-  //*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
-  @include media-tablet {
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    &__content {
-      align-items: center;
-      margin-top: 10rem;
-
-      .hero-gif {
-        bottom: 5%;
-        margin: 0 50%;
-        width: 250px;
+      .hero__content--social {
+        display: flex;
+        gap: 1rem;
+        padding: 10px 5px 30px 5px;
+        i {
+          color: var(--color-on-primary);
+        }
       }
-
-      &--links {
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  //*-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
-  @include media-medium {
-    padding: 4rem;
-    &__content {
-      .hero-gif {
-        bottom: 10%;
-        width: 200px;
-      }
-      &--title {
-        font-size: font-size(font-size-xlarge);
-        font-weight: font-weight(font-weight-regular);
-      }
-      &--para {
-        font-size: 2rem;
-      }
-      &--links {
-        a:link,
-        a:visited {
-          font-size: font-size(font-size-small);
+      .hero__content--links {
+        display: flex;
+        gap: 1rem;
+        a {
+          color: var(--color-on-primary);
         }
       }
     }
-  }
-
-  //*-*-*-*-*-*-*-*-*-*-- The 400px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
-  @include media-small {
-    &__content {
-      &--links {
-        flex-direction: column;
-
-        a:link,
-        a:visited {
-          display: inline-block;
-        }
-
-        a:link:first-child,
-        a:visited:first-child {
-          margin-bottom: 5vw;
-        }
-      }
-    }
-  }
-
-  //*-*-*-*-*-*-*-*-*-*-- The 1700px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
-  @include media-desktop {
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    &__content {
-      align-items: center;
-      margin-top: 10rem;
-
+    .right {
+      flex: 1;
       .hero-gif {
-        bottom: 5%;
-        margin: 0 50%;
         width: 300px;
       }
-      &--links {
-        justify-content: flex-start;
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 1100px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    height: 100vh;
+
+    &__content {
+      flex-direction: column;
+      padding: 5rem;
+      .left {
+        align-items: center;
+      }
+      .right {
+        .hero-gif {
+          width: 280px;
+        }
       }
     }
   }
+}
+
+.clouds-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
 }

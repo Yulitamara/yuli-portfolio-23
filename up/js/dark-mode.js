@@ -7,7 +7,7 @@ const toggleSwitch = document.querySelector("#darkmodeToggle");
 function switchTheme(e) {
   if (document.documentElement.getAttribute("data-theme") == "light") {
     document.documentElement.setAttribute("data-theme", "dark");
-    clouds.src = "/up/imgs/moon.png";
+    // clouds.src = "/up/imgs/moon.png";
     bgAnimation.classList.remove("active");
     heroGif.src = "/up/imgs/hero-night-gif.gif";
     this.innerHTML = sun;
@@ -15,7 +15,7 @@ function switchTheme(e) {
     document.documentElement.setAttribute("data-theme", "light");
     bgAnimation.classList.add("active");
     this.innerHTML = moon;
-    clouds.src = "/up/imgs/clouds2.png";
+    // clouds.src = "/up/imgs/clouds2.png";
     heroGif.src = "/up/imgs/hero-gif.gif";
   }
 }
