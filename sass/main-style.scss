@@ -44,12 +44,6 @@
 @import "11.footer";
 
 // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Placeholder Styles *-*-*-*-*-*-*-*-*-*-*-*-*
-// Background Properties
-%bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 // Section Padding
 %sec-padding {
@@ -62,7 +56,7 @@
 // Styles for Section headings (h2)
 %sec-heading {
   font-size: font-size(font-size-medium);
-  font-weight: font-weight(font-weight-light);
+  font-weight: font-weight(font-weight-regular);
   letter-spacing: 0.1rem;
 }
 
@@ -70,18 +64,6 @@
 %sec-para {
   font-size: font-size(font-size-small);
 }
-
-//Styles for Section h3
-%sec-h3 {
-  font-size: font-size(font-size-small);
-  color: var(--color-quinary);
-}
-
-//Styles for Section h4
-%sec-h4 {
-  color: var(--color-quinary);
-}
-
 //************************** Scroll to top button *******************
 .scroll {
   position: fixed;

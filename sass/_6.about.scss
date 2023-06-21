@@ -1,21 +1,26 @@
 .about {
   grid-column: container-start / container-end;
-  @extend %sec-padding;
   color: var(--color-on-background);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 5rem 20rem 0 20rem;
+  background-color: #fcf8ec;
+  color: #42449d;
 
   &__title {
-    @extend %sec-heading;
-    font-weight: font-weight(font-weight-medium) !important;
-    padding: 1rem;
-    margin-top: 2rem;
+    font-size: font-size(font-size-regular);
+    font-weight: font-weight(font-weight-regular);
+    width: 60%;
   }
 
   &__para {
-    text-align: center;
     @extend %sec-para;
     margin-bottom: 4rem;
+    text-align: justify;
+    width: 40%;
+  }
+
+  &__links {
+    align-self: center;
+    padding-bottom: 2rem;
   }
 }
